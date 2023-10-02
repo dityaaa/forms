@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+      no_cache: true
+    entrypoint: [ "npm", "run", "dev" ]
+    volumes:
+      - /usr/src/app/node_modules
+      - ./:/usr/src/app
+    ports:
+      - 3000:3000
